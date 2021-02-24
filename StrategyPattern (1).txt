@@ -1,0 +1,151 @@
+//1 textbox gui
+public interface TextBox{
+    
+    isvalid();
+}
+
+public class ApplicationA{
+    isValid(){
+        ...
+    }
+    ...
+}
+
+public class ApplicationB{
+    isValid(){
+        ...
+    }
+    ...
+}
+
+public class GUI{
+    TextBox textbox;
+    GUI(Textbox textbox){
+        this.textbox = textbox;
+    }
+    
+    void textChanged(test){
+        if(textbox.isValid(text)){}
+        else{}
+    }
+}
+
+//2 email client
+public interface info{
+    
+    getLogin();
+}
+
+public class Console{
+    getLogin(){
+        //promt
+    }
+    ...
+}
+
+public class GUIApp{
+    getLogin(){
+        //display dialog
+    }
+    ...
+}
+
+public class app{
+    getLogin(){
+        //configFile
+    }
+    ...
+}
+
+public class EmailClient{
+    Info info;
+    EmailClient(Info info){
+        this.info = info;
+    }
+    
+    void sendEmail(){
+        if(loginRequired){
+             info.getLogin()
+        }
+        else{
+            ...
+        }
+    }
+}
+
+
+//3 E-commerce
+public interface data{
+    
+    salesTax();
+    paymentMethod();
+    shippingProvider();
+}
+
+public class ApplicationA{
+    State state;
+    Payment payment;
+    Shipping shipping;
+    salesTax(){...}
+    paymentMethod(){...}
+    shippingProvider(){...}
+}
+
+public class ApplicationB{
+    State state;
+    Payment payment;
+    Shipping shipping;
+    salesTax(){...}
+    paymentMethod(){...}
+    shippingProvider(){...}
+}
+
+
+public class ECommerce{
+    Data data;
+    EmailClient(Data data){
+        this.data = data;
+    }
+    
+    void processOrder(){
+        data.salesTax();
+        data.paymentMethod();
+        data.shippingProvider();
+    }
+}
+...
+
+//4 AI player
+
+public interface Strategies{
+    
+    getMove();
+}
+
+public class MovesA{//agressive
+    getMove(){...}
+}
+
+public class MovesB{//defensive
+     getMove(){...}
+}
+//sneaky, smart, combo, random
+
+public class AIPlayer{
+    List<Strategy> strategies;
+    APIPlayer(Strategy strategies){
+        this.strategies = strategies;
+    }
+    
+    void makeMove(){
+        
+        i = decideStrategy(stratagies)
+        strategy.at(i).getMove()
+        ...
+    }
+    
+    int decideStrategy(list<Strategy> strategies){
+        //fancy stuff
+        return i
+    }
+}
